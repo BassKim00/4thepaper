@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE FUNCTION IS_HDISE(input text) RETURNS int
+    DETERMINISTIC
+BEGIN
+    IF (input LIKE "%5%") THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+	END IF;
+END

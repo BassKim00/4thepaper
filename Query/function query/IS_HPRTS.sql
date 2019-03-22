@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE FUNCTION IS_HPRTS(input text) RETURNS int
+    DETERMINISTIC
+BEGIN
+    IF (input LIKE "%4%") THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+	END IF;
+END

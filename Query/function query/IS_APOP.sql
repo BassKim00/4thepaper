@@ -1,0 +1,11 @@
+DELIMITER $$
+
+CREATE FUNCTION IS_APOP(input text) RETURNS int
+    DETERMINISTIC
+BEGIN
+    IF (input LIKE "%6%") THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+	END IF;
+END
